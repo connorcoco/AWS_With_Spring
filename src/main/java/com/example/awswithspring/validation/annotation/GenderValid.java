@@ -1,6 +1,6 @@
-package com.example.securitywithredis.validation.annotation;
+package com.example.awswithspring.validation.annotation;
 
-import com.example.securitywithredis.validation.validator.GenderValidator;
+import com.example.awswithspring.validation.validator.GenderValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 

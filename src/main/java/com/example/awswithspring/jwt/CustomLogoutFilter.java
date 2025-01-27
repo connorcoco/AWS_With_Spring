@@ -1,8 +1,8 @@
-package com.example.securitywithredis.jwt;
+package com.example.awswithspring.jwt;
 
-import com.example.securitywithredis.apiPayload.code.status.ErrorStatus;
-import com.example.securitywithredis.apiPayload.exception.GeneralException;
-import com.example.securitywithredis.service.RefreshTokenService;
+import com.example.awswithspring.apiPayload.code.status.ErrorStatus;
+import com.example.awswithspring.apiPayload.exception.GeneralException;
+import com.example.awswithspring.service.RefreshTokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;

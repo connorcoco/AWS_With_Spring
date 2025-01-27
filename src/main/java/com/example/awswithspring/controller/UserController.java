@@ -1,11 +1,11 @@
-package com.example.securitywithredis.controller;
+package com.example.awswithspring.controller;
 
-import com.example.securitywithredis.apiPayload.ApiResponse;
-import com.example.securitywithredis.converter.UserConverter;
-import com.example.securitywithredis.domain.entity.UserEntity;
-import com.example.securitywithredis.dto.UserRequestDTO;
-import com.example.securitywithredis.dto.UserResponseDTO;
-import com.example.securitywithredis.service.JoinService;
+import com.example.awswithspring.apiPayload.ApiResponse;
+import com.example.awswithspring.converter.UserConverter;
+import com.example.awswithspring.domain.entity.UserEntity;
+import com.example.awswithspring.dto.UserRequestDTO;
+import com.example.awswithspring.dto.UserResponseDTO;
+import com.example.awswithspring.service.JoinService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

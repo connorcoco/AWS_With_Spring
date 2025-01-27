@@ -1,9 +1,8 @@
-package com.example.securitywithredis.util;
+package com.example.awswithspring.util;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 @Component

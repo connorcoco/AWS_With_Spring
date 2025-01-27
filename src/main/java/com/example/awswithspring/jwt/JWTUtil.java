@@ -1,4 +1,4 @@
-package com.example.securitywithredis.jwt;
+package com.example.awswithspring.jwt;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Value;

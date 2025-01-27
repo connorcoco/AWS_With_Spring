@@ -1,8 +1,8 @@
-package com.example.securitywithredis.domain.entity;
+package com.example.awswithspring.domain.entity;
 
-import com.example.securitywithredis.domain.common.BaseEntity;
-import com.example.securitywithredis.domain.entity.enums.AccountStatus;
-import com.example.securitywithredis.domain.entity.enums.Gender;
+import com.example.awswithspring.domain.common.BaseEntity;
+import com.example.awswithspring.domain.entity.enums.AccountStatus;
+import com.example.awswithspring.domain.entity.enums.Gender;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;

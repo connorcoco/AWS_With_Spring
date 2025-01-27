@@ -1,8 +1,8 @@
-package com.example.securitywithredis.jwt;
+package com.example.awswithspring.jwt;
 
-import com.example.securitywithredis.dto.UserRequestDTO;
-import com.example.securitywithredis.util.CookieUtil;
-import com.example.securitywithredis.util.RefreshUtil;
+import com.example.awswithspring.dto.UserRequestDTO;
+import com.example.awswithspring.util.CookieUtil;
+import com.example.awswithspring.util.RefreshUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;

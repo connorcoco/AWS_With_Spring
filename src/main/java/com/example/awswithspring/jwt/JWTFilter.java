@@ -1,9 +1,9 @@
-package com.example.securitywithredis.jwt;
+package com.example.awswithspring.jwt;
 
-import com.example.securitywithredis.apiPayload.code.status.ErrorStatus;
-import com.example.securitywithredis.apiPayload.exception.GeneralException;
-import com.example.securitywithredis.domain.entity.UserEntity;
-import com.example.securitywithredis.dto.CustomUserDetails;
+import com.example.awswithspring.apiPayload.code.status.ErrorStatus;
+import com.example.awswithspring.apiPayload.exception.GeneralException;
+import com.example.awswithspring.domain.entity.UserEntity;
+import com.example.awswithspring.dto.CustomUserDetails;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

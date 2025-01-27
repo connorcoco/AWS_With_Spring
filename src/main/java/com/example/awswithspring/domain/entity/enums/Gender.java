@@ -1,4 +1,4 @@
-package com.example.securitywithredis.domain.entity.enums;
+package com.example.awswithspring.domain.entity.enums;
 
 public enum Gender {
     MALE, FEMALE, NONE

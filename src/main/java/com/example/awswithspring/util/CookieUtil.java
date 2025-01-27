@@ -1,4 +1,4 @@
-package com.example.securitywithredis.util;
+package com.example.awswithspring.util;
 
 import jakarta.servlet.http.Cookie;
 

@@ -1,7 +1,7 @@
-package com.example.securitywithredis.dto;
+package com.example.awswithspring.dto;
 
-import com.example.securitywithredis.domain.entity.UserEntity;
-import com.example.securitywithredis.domain.entity.enums.AccountStatus;
+import com.example.awswithspring.domain.entity.UserEntity;
+import com.example.awswithspring.domain.entity.enums.AccountStatus;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

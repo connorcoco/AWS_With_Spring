@@ -1,6 +1,6 @@
-package com.example.securitywithredis.controller;
+package com.example.awswithspring.controller;
 
-import com.example.securitywithredis.service.ReissueService;
+import com.example.awswithspring.service.ReissueService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;

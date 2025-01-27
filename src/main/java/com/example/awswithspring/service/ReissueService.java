@@ -1,10 +1,9 @@
-package com.example.securitywithredis.service;
+package com.example.awswithspring.service;
 
-import com.example.securitywithredis.apiPayload.code.status.ErrorStatus;
-import com.example.securitywithredis.apiPayload.exception.GeneralException;
-import com.example.securitywithredis.jwt.JWTUtil;
-import com.example.securitywithredis.util.CookieUtil;
-import jakarta.servlet.http.Cookie;
+import com.example.awswithspring.apiPayload.code.status.ErrorStatus;
+import com.example.awswithspring.apiPayload.exception.GeneralException;
+import com.example.awswithspring.jwt.JWTUtil;
+import com.example.awswithspring.util.CookieUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;

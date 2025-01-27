@@ -1,10 +1,10 @@
-package com.example.securitywithredis.service;
+package com.example.awswithspring.service;
 
-import com.example.securitywithredis.apiPayload.code.status.ErrorStatus;
-import com.example.securitywithredis.apiPayload.exception.GeneralException;
-import com.example.securitywithredis.domain.entity.UserEntity;
-import com.example.securitywithredis.dto.CustomUserDetails;
-import com.example.securitywithredis.repository.UserRepository;
+import com.example.awswithspring.apiPayload.code.status.ErrorStatus;
+import com.example.awswithspring.apiPayload.exception.GeneralException;
+import com.example.awswithspring.domain.entity.UserEntity;
+import com.example.awswithspring.dto.CustomUserDetails;
+import com.example.awswithspring.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
