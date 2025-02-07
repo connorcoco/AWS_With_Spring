@@ -1,6 +1,6 @@
 package com.example.awswithspring.jwt;
 
-import com.example.awswithspring.dto.UserRequestDTO;
+import com.example.awswithspring.dto.AuthDTO.AuthRequestDTO;
 import com.example.awswithspring.util.CookieUtil;
 import com.example.awswithspring.util.RefreshUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -38,8 +38,8 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         try {
             // JSON 바디에서 username과 password 추출
             ObjectMapper objectMapper = new ObjectMapper();
-            UserRequestDTO.LoginDTO loginRequest = null;
-            loginRequest = objectMapper.readValue(req.getInputStream(), UserRequestDTO.LoginDTO.class);
+            AuthRequestDTO.LoginDTO loginRequest = null;
+            loginRequest = objectMapper.readValue(req.getInputStream(), AuthRequestDTO.LoginDTO.class);
 
             String username = loginRequest.getUsername();
             String password = loginRequest.getPassword();

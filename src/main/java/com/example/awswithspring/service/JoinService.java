@@ -4,7 +4,7 @@ import com.example.awswithspring.apiPayload.code.status.ErrorStatus;
 import com.example.awswithspring.apiPayload.exception.GeneralException;
 import com.example.awswithspring.converter.UserConverter;
 import com.example.awswithspring.domain.entity.UserEntity;
-import com.example.awswithspring.dto.UserRequestDTO;
+import com.example.awswithspring.dto.AuthDTO.AuthRequestDTO;
 import com.example.awswithspring.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class JoinService {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
-    public UserEntity joinProcess(UserRequestDTO.JoinDTO request){
+    public UserEntity joinProcess(AuthRequestDTO.JoinDTO request){
 
         Boolean isExist = userRepository.existsByUsername(request.getUsername());
 
