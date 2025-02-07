@@ -1,11 +1,11 @@
-package com.example.awswithspring.dto;
+package com.example.awswithspring.dto.AuthDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-public class UserResponseDTO {
+public class AuthResponseDTO {
     @Builder
     @Getter
     @NoArgsConstructor

@@ -2,8 +2,8 @@ package com.example.awswithspring.converter;
 
 import com.example.awswithspring.domain.entity.UserEntity;
 import com.example.awswithspring.domain.entity.enums.Gender;
-import com.example.awswithspring.dto.UserRequestDTO;
-import com.example.awswithspring.dto.UserResponseDTO;
+import com.example.awswithspring.dto.AuthDTO.AuthRequestDTO;
+import com.example.awswithspring.dto.AuthDTO.AuthResponseDTO;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.time.LocalDateTime;
@@ -17,15 +17,15 @@ public class UserConverter {
         return dateTime.format(formatter);
     }
 
-    public static UserResponseDTO.JoinResultDTO toJoinResultDTO(UserEntity user){
-        return UserResponseDTO.JoinResultDTO.builder()
+    public static AuthResponseDTO.JoinResultDTO toJoinResultDTO(UserEntity user){
+        return AuthResponseDTO.JoinResultDTO.builder()
                 .memberId(user.getId())
                 .createAt(formatDateTime(user.getCreatedAt()))
                 .build();
     }
 
     //    UserEntity 객체를 만드는 작업 (클라이언트가 준 DTO to Entity)
-    public static UserEntity toUser(UserRequestDTO.JoinDTO request, BCryptPasswordEncoder bCryptPasswordEncoder){
+    public static UserEntity toUser(AuthRequestDTO.JoinDTO request, BCryptPasswordEncoder bCryptPasswordEncoder){
 
         return UserEntity.builder()
                 .username(request.getUsername())
