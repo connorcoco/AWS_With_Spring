@@ -10,7 +10,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -67,6 +69,35 @@ public class ExceptionAdvice extends ResponseEntityExceptionHandler {
     public ResponseEntity onThrowException(GeneralException generalException, HttpServletRequest request) {
         ResponseDTO errorReasonHttpStatus = generalException.getErrorReasonHttpStatus();
         return handleExceptionInternal(generalException,errorReasonHttpStatus,null,request);
+    }
+
+    // 필수인 파라미터 값이 누락 됐을 경우 처리 (MissingServletRequestParameterException 처리)
+    @Override
+    protected ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+        String parameterName = ex.getParameterName();
+        String message = parameterName + " 값이 필요합니다.";
+
+        return handleExceptionInternalFalse(
+                ex,
+                ErrorStatus._BAD_REQUEST,
+                HttpHeaders.EMPTY,
+                HttpStatus.BAD_REQUEST,
+                request,
+                message
+        );
+    }
+
+    // AuthenticationException 처리
+    @ExceptionHandler(AuthenticationException.class)
+    public ResponseEntity<Object> handleAuthenticationException(AuthenticationException e, WebRequest request) {
+        return handleExceptionInternalFalse(
+                e,
+                ErrorStatus._UNAUTHORIZED,
+                HttpHeaders.EMPTY,
+                HttpStatus.UNAUTHORIZED,
+                request,
+                "인증이 필요합니다"
+        );
     }
 
     private ResponseEntity<Object> handleExceptionInternal(Exception e, ResponseDTO reason,
