@@ -28,3 +28,9 @@ springdoc:
 logging:
   level:
     org.springframework.data.redis: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
